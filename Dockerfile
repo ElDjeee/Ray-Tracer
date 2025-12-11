@@ -1,4 +1,4 @@
-FROM ubuntu:24.04
+FROM ubuntu:24.04 AS build
 
 RUN apt-get update && \
     apt-get install -y --no-install-recommends \
@@ -7,10 +7,16 @@ RUN apt-get update && \
     && rm -rf /var/lib/apt/lists/*
 
 WORKDIR /app
-
 COPY . .
 
-RUN cmake -B build && \
-    cmake --build build
+RUN cmake -B build -DCMAKE_BUILD_TYPE=Release && \
+    cmake --build build -j"$(nproc)"
 
-CMD ["./build/RTProject"]
+
+FROM ubuntu:24.04 AS runtime
+
+WORKDIR /app
+
+COPY --from=build /app/build/RTProject ./RTProject
+
+CMD ["./RTProject"]
