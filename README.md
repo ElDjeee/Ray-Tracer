@@ -8,7 +8,7 @@ I followed the Ray Tracing In One Weekend (see https://raytracing.github.io/book
 
 At this time, the code is pretty similar, but it will improve in the coming weeks.
 
-It can rendered spheres with some materials (metal, lambertian, dielectric). Has a simple antialiasing (used multiple samples), background gradient, defocus blur.
+It can rendered spheres with some materials (metal, lambertian, dielectric). Has a simple antialiasing (used multiple samples), background gradient, defocus blur, motion blur, Bounding Volume Hierarchy.
 
 Pretty cool to gain some intuition about 3D math, refresh my knowledge of linear algebra, and demystify computer graphics. Thanks to Google Images for the schemas, and ChatGPT for some explanations (but it's not as powerful as I thought for this kind of subject, unfortunately).
 
