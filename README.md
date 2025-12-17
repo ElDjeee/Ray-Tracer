@@ -19,8 +19,8 @@ Pretty cool to gain some intuition about 3D math, refresh my knowledge of linear
 Use Docker.
 
 ```bash
-docker build -t rt-project .
-docker run --rm rt-project > img.ppm
+docker compose build
+docker compose run --rm rtproject > img.ppm
 ```
 
 The image will be saved on your machine.

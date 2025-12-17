@@ -1,0 +1,8 @@
+services:
+  rtproject:
+    build:
+      context: .
+    environment:
+      RTW_IMAGE: /assets/images
+    volumes:
+      - ./assets/images:/assets/images:ro

@@ -12,7 +12,6 @@ COPY . .
 RUN cmake -B build -DCMAKE_BUILD_TYPE=Release && \
     cmake --build build -j"$(nproc)"
 
-
 FROM ubuntu:24.04 AS runtime
 
 WORKDIR /app

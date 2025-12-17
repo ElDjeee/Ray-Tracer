@@ -124,6 +124,7 @@ class camera {
                 color attenuation;
                 if (rec.mat->scatter(r, rec, attenuation, scattered))
                     return attenuation * ray_color(scattered, depth-1, world);
+                static int counter = 0;
                 return color(0, 0, 0);
             }
 
